@@ -1,0 +1,52 @@
+.main-block {
+  padding: 35px; }
+
+.integrations {
+  padding: 45px;
+  padding-bottom: 65px; }
+  .integrations img {
+    margin-right: 25px; }
+
+.call-to-action {
+  padding: 30px;
+  margin-bottom: 60px; }
+  .call-to-action button {
+    color: white;
+    background-color: #008cee; }
+  .call-to-action button:hover {
+    opacity: 0.8; }
+
+.integrations-background {
+  background-color: #FBFBFC;
+  border-top: 1px solid #E1E1E1; }
+
+.features-headline {
+  padding-top: 80px;
+  padding-bottom: 35px; }
+
+.features-block {
+  padding-bottom: 80px; }
+  .features-block .content-section {
+    padding: 15px;
+    padding-bottom: 30px; }
+
+.navbar a {
+  color: black; }
+
+.navbar a:hover {
+  color: #00adee; }
+
+.list-group-item {
+  border: 0px;
+  background-color: black;
+  color: #777777; }
+  .list-group-item a {
+    color: #777777; }
+  .list-group-item a:hover {
+    color: #00adee; }
+
+.list-group {
+  padding: 20px;
+  padding-top: 50px; }
+  .list-group h6 {
+    color: white; }

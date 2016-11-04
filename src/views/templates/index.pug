@@ -1,0 +1,76 @@
+extends ../layouts/layout
+
+block content
+  .container.call-to-action
+    .row
+      .col-md-7.text-md-center
+        img.img-fluid(src="./img/landing_img.png")
+      .col-md-5
+        h6 Fast, powerful, scalable
+        h4(style="color: rgba(0, 140, 238, 1);") Develop your apps, not integrations
+          //- | Azuqua is the first integration platform designed with #[strong application development] in mind.
+        p
+          | Build your apps on Azuqua. We provide ready-made integrations to the most popular APIs out there in a low-code development environment.
+        p
+          | We provide the integration piece, handle security, scale, reliability, and more.
+        p Focus on your apps. We'll deal with the rest.
+        button.btn.btn-lg SIGN UP FOR FREE
+  .integrations-background
+    .container.integrations
+      .row.integration-headline(style="padding-bottom: 25px;")
+        .col-md-12.text-md-center
+          h2 Integrations at the speed of now.
+          .lead Over 60+ integrations available to connect to your app.
+      .row
+        .col-md-12.text-md-center
+          img(src="./img/connectors/apigee.png" width=70 alt="Apigee" title="Apigee")
+          img(src="./img/connectors/pivotal_cloud_foundry.png" width=70 alt="Pivotal Cloud Foundry" title="Pivotal Cloud Foundry")
+          img(src="./img/connectors/twilio.png" width=70 alt="Twilio" title="Twilio")
+          img(src="./img/connectors/twitter.png" width=70 alt="Twitter" title="Twitter")
+          img(src="./img/connectors/gmail.png" width=70 alt="Gmail" title="Gmail")
+          img(src="./img/connectors/sendgrid.png" width=70 alt="SendGrid" title="SendGrid")
+          img(src="./img/connectors/amazon.png" width=70 alt="Amazon S3" title="Amazon S3")
+          img(src="./img/connectors/slack.png" width=70 alt="Slack" title="Slack")
+          img(src="./img/connectors/stripe.png" width=70 alt="Stripe" title="Stripe")
+          img(src="./img/connectors/github.png" width=70 alt="GitHub" title="GitHub")
+          img(src="./img/connectors/box.png" width=70 alt="Box" title="Box")
+
+  .features-background(style="background-color: #3A3F50; color: white;")
+    .container.features-block
+      .row.features-headline
+        .col-md-12.text-md-center
+          h2 Build fast. Really fast.
+          .lead(style="color: #DCDCDC")
+      .row.features-list
+        .col-md-4.content-section
+          h5 Azuqua Platform
+          .content(style="color:#DCDCDC;")
+            | You build your apps in our visual development environment. We take care of reliability, scalability, and security. Focus your efforts on what matters most.
+        .col-md-4.content-section
+          h5 Azuqua Forge
+          .content(style="color:#DCDCDC;")
+            | Want to integrate a custom API or an API we don't yet support? Forge lets you build custom API integrations that you can re-use inside the Azuqua platform. Build once, use everywhere.
+        .col-md-4.content-section
+          h5
+            //- i(class="fa fa-mobile" aria-hidden="true")
+            | Azuqua Devices
+          .content(style="color:#DCDCDC;")
+            | With the Azuqua Devices mobile app, you can activate your app while on-the-go. Interested in logistics, supply chain, or inventory innovation? This enables you to be disruptive in a variety of industries.
+      .row
+        .col-md-4.content-section
+          h5.title API-driven development.
+          .content(style="color:#DCDCDC;")
+            | Azuqua lets you expose your apps as API endpoints. Build your app, and get it out there into the world.
+        .col-md-4.content-section
+          h5.title A vast library of integrations.
+          .content(style="color:#DCDCDC;")
+            | We have over 60+ integrations (we call them connectors!) to leverage within your app. We are constantly developing more connectors every month.
+        .col-md-4.content-section
+          h5.title Real-time tracking of data.
+          .content(style="color:#DCDCDC;")
+            | We let you keep track of all the data flowing through your app, in real time. Discover exactly what your apps are doing.
+  //- .enterprise-features
+  //-   .container
+  //-     .row
+  //-       .col-md-12.text-md-center
+  //-         p Byaaah!

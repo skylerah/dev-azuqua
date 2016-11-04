@@ -3,20 +3,21 @@
 const gulp = require('gulp');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
+const gutil = require('gulp-util');
 const livereload = require('gulp-livereload');
 
 gulp.task('views', function buildHTML() {
   return gulp.src('./src/views/templates/**/*.pug')
   .pipe(pug())
   .pipe(gulp.dest('./public'))
-  .pipe(livereload());
+  .pipe(gutil.env.env === 'dev' ? livereload() : gutil.noop());
 });
 
 gulp.task('sass', function buildCSS() {
   return gulp.src('./src/scss/*.scss')
   .pipe(sass())
   .pipe(gulp.dest('./public/css'))
-  .pipe(livereload());
+  .pipe(gutil.env.env === 'dev' ? livereload() : gutil.noop());
 });
 
 gulp.task('watch', function() {
@@ -25,4 +26,8 @@ gulp.task('watch', function() {
   gulp.watch('./src/views/**/*.pug', ['views']);
 });
 
-gulp.task('default', ['views', 'sass', 'watch']);
+if (gutil.env.env === 'dev') {
+  gulp.task('default', ['views', 'sass', 'watch']);
+} else {
+  gulp.task('default', ['views', 'sass']);
+}

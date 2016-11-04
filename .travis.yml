@@ -2,8 +2,6 @@ language: node_js
 node_js:
   - "6"
   - "6.1"
-  - "5.11"
-  - "0.6"
 
 before_script:
   - npm install -g gulp
@@ -11,7 +9,7 @@ before_script:
   - npm install gulp-pug
   - npm install gulp-sass
   - npm install gulp-livereload
-script: gulp
+script: gulp --env=production
 
 deploy:
   provider: s3

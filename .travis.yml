@@ -8,6 +8,9 @@ node_js:
 before_script:
   - npm install -g gulp
   - npm install gulp
+  - npm install gulp-pug
+  - npm install gulp-sass
+  - npm install gulp-livereload
 script: gulp
 
 deploy:

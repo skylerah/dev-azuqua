@@ -3,7 +3,6 @@
 const gulp = require('gulp');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
-const glob = require('glob');
 const livereload = require('gulp-livereload');
 
 gulp.task('views', function buildHTML() {

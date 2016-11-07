@@ -9,14 +9,14 @@ const livereload = require('gulp-livereload');
 gulp.task('views', function buildHTML() {
   return gulp.src('./src/views/templates/**/*.pug')
   .pipe(pug())
-  .pipe(gulp.dest('./public'))
+  .pipe(gulp.dest('./'))
   .pipe(gutil.env.env === 'dev' ? livereload() : gutil.noop());
 });
 
 gulp.task('sass', function buildCSS() {
   return gulp.src('./src/scss/*.scss')
   .pipe(sass())
-  .pipe(gulp.dest('./public/css'))
+  .pipe(gulp.dest('./css'))
   .pipe(gutil.env.env === 'dev' ? livereload() : gutil.noop());
 });
 

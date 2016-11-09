@@ -14,7 +14,8 @@ block content
         //- p
         //-   | "Low code" is often synonymous with "restrictive". This doesn't have to be true.
         p We believe that #[strong powerful] and #[strong easy] don't have to be mutually exclusive. With Azuqua, you get both!
-        button.btn.btn-lg SIGN UP FOR FREE
+        a(href="http://auth.azuqua.com/signup?signup_from=Auth&partner_name=Azuqua")
+          button.btn.btn-lg SIGN UP FOR FREE
         p(style='font-size: 10px; padding-top: 5px;')
           i
             a(href="/more_info/restrictions/") what's the catch? find out here!
@@ -71,6 +72,19 @@ block content
           h5.title Real-time tracking of data.
           .content(style="color:#DCDCDC;")
             | We let you keep track of all the data flowing through your app, in real time. Discover exactly what your apps are doing.
+  script.
+    function handleOutboundLinkClicks(event) {
+      ga('send', 'event', {
+        eventCategory: 'Call-to-Action',
+        eventAction: 'click',
+        eventLabel: 'Sign Up Button',
+        transport: 'beacon'
+      });
+    }
+    $('.btn').click(function(event) {
+      handleOutboundLinkClicks(event);
+      });
+
   //- .enterprise-features
   //-   .container
   //-     .row

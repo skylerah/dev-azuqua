@@ -7,18 +7,18 @@ const gutil = require('gulp-util');
 const livereload = require('gulp-livereload');
 const uglify = require('gulp-uglify');
 
-gulp.task('views', function buildHTML() {
+gulp.task('views', function() {
   return gulp.src('./src/views/templates/**/*.pug')
   .pipe(pug())
   .pipe(gulp.dest('./'))
-  .pipe(gutil.env.env === 'dev' ? livereload() : gutil.noop());
+  .pipe(livereload());
 });
 
-gulp.task('sass', function buildCSS() {
+gulp.task('sass', function() {
   return gulp.src('./src/scss/*.scss')
   .pipe(sass())
   .pipe(gulp.dest('./css'))
-  .pipe(gutil.env.env === 'dev' ? livereload() : gutil.noop());
+  .pipe(livereload());
 });
 
 gulp.task('compress', function() {
@@ -31,10 +31,7 @@ gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('./src/scss/*.scss', ['sass']);
   gulp.watch('./src/views/**/*.pug', ['views']);
+  gulp.watch('./src/content/markdown/*.md', ['views']);
 });
 
-if (gutil.env.env === 'dev') {
-  gulp.task('default', ['views', 'sass', 'watch', 'compress']);
-} else {
-  gulp.task('default', ['views', 'sass', 'compress']);
-}
+gulp.task('default', ['views', 'sass', 'watch', 'compress']);

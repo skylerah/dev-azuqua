@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous")
+    script(src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous")
+  body
+    .container(style="padding-top: 100px;")
+      .row(style="padding: 20px;")
+        .col-md-12.text-md-center
+          h1(style="color: #00AAEE;").display-3
+            strong Azuqua, an integration platform.
+      .row
+        .col-md-6.text-md-center.offset-md-3
+          p.lead Thanks for your interest! Please input your email below, and you'll be notified as soon as our Developer Program goes live.
+      .row(style="padding: 20px;")
+        .col-md-6.offset-md-3.text-md-center
+          form.form-inline(action="https://betaapi.azuqua.com/flo/3372355773819d0d89172181df5674ea/invoke" type="POST")
+            .form-group
+              //- label(style="margin-right: 5px;") Email
+              input(placeholder="skyler@azuqua.com..." name="email" type="text").form-control
+            button(type="submit").btn.btn-primary Submit
+    //- script.
+    //-   $(document).ready(function() {
+    //-     $('form').submit(function(e) {
+    //-       e.preventDefault();
+    //-       $.ajax({
+    //-         type: "POST",
+    //-         url: "https://betaapi.azuqua.com/flo/3372355773819d0d89172181df5674ea/invoke",
+    //-         data: $('form').serialize(),
+    //-         success: function(data) {
+    //-           $('form').html('<p>Cool! You are good to go! Thanks for your interest!</p>');
+    //-         }
+    //-         });
+    //-       });
+    //-   });

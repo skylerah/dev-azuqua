@@ -18,7 +18,7 @@ block content
           button.btn.btn-lg SIGN UP FOR FREE
         p(style='font-size: 10px; padding-top: 5px;')
           i
-            a(href="/more_info/restrictions/") what's the catch? find out here!
+            a(href="/more_info/developer_plan.html") what's the catch? find out here!
   .integrations-background
     .container.integrations
       .row.integration-headline(style="padding-bottom: 25px;")
@@ -42,7 +42,7 @@ block content
     .container.features-block
       .row.features-headline
         .col-md-12.text-md-center
-          h2 Build fast. Really fast.
+          h2.display-4 Build fast. Really fast.
           .lead(style="color: #DCDCDC")
       .row.features-list
         .col-md-4.content-section
@@ -72,21 +72,21 @@ block content
           h5.title Real-time tracking of data.
           .content(style="color:#DCDCDC;")
             | We let you keep track of all the data flowing through your app, in real time. Discover exactly what your apps are doing.
-  script.
-    function handleOutboundLinkClicks(event) {
-      ga('send', 'event', {
-        eventCategory: 'Call-to-Action',
-        eventAction: 'click',
-        eventLabel: 'Sign Up Button',
-        transport: 'beacon'
-      });
-    }
-    $('.btn').click(function(event) {
-      handleOutboundLinkClicks(event);
-      });
+  .background(style="background-color: #FBFBFC;")
+    .enterprise-features(style="padding-top: 80px; padding-bottom: 80px;")
+      .container
+        .row
+          .col-md-8
+            img.img-responsive(src="./img/azuqua_designer.png" width=675)
+          .col-md-4
+            h1 Programming first.
+            .lead No magic handwaving necessary.
+            h2(style="line-height: 1.3")
+            p All the features of a full-fedged programming language. None of the pain.
+            p You should be enabled to #[strong create] applications and integrations leveraging the most effective programming paradigms and principles- just #[strong faster], and #[strong easier].
+            p Take the best parts of developing web applications, and ditch the rest.
 
-  //- .enterprise-features
-  //-   .container
-  //-     .row
-  //-       .col-md-12.text-md-center
-  //-         p Byaaah!
+  .features-background(style="background-color: #3A3F50; color: white;")
+    .container.features-block
+      .row.features-headline
+        .col-md-12.text-md-center

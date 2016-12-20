@@ -11,9 +11,8 @@ var events = (function() {
   return {
     handleSignUp: handleSignUp
   };
-  
-});
+})();
 
 $('.btn').click(function(event) {
-  handleSignUp(event);
+  events.handleSignUp(event);
   });

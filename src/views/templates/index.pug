@@ -1,30 +1,29 @@
 extends ../layouts/layout
 
 block content
-  .container.call-to-action
-    .row
+  .container.call-to-action(style="padding-top: 50px;")
+    .row(style="padding-top: 15px;")
       .col-md-7.text-md-center
         img.img-fluid(src="./img/landing_img.png")
       .col-md-5
-        h6 Fast, reliable, scalable
-        h4(style="color: rgba(0, 140, 238, 1);") Build your apps, not integrations
-          //- | Azuqua is the first integration platform designed with #[strong application development] in mind.
-        p Develop your apps inside our intuitive (and beautiful!) #[strong low code] visual development environment.
-        p We provide ready-made integrations to the most popular services out there. Add even more value to your app by leveraging the burgeoning #[strong API economy].
-        //- p
-        //-   | "Low code" is often synonymous with "restrictive". This doesn't have to be true.
-        p We believe that #[strong powerful] and #[strong easy] don't have to be mutually exclusive. With Azuqua, you get both!
-        a(href="http://auth.azuqua.com/signup?signup_from=Auth&partner_name=Azuqua&plan=AZQ_DEV")
-          button.btn.btn-lg SIGN UP FOR FREE
-        //- p(style='font-size: 10px; padding-top: 5px;')
-        //-   i
-        //-     a(href="/more_info/developer_plan.html") what's the catch? find out here!
+        h6 Fast, powerful, scalable
+        h3(style="color: rgba(0, 140, 238, 1);") From idea to product, instantly.
+        p Spend your time innovating, not configuring. Azuqua lets you focus on the most important thing: #[strong building apps]. Azuqua lets you get started building your ideas faster than any other development tool.
+        p
+         | We provide a beautiful #[strong low code] development environment, #[strong hands-off infrastructure], service integrations to the most #[strong popular APIs] out there, and more.
+        form.form-inline(style="padding-top: 15px;" action="https://auth.azuqua.com/signup" method="POST")
+          .form-group
+            input(name="email" type="email" placeholder="Email Address").form-control
+            input(name="signup_from" type="hidden" value="Developer").form-control
+            input(name="plan" type="hidden" value="AZQ_DEV").form-control
+            input(name="partner_name" type="hidden" value="Azuqua").form-control
+          button(type="submit").btn.btn-primary Sign Up For Early Access
   .integrations-background
     .container.integrations
       .row.integration-headline(style="padding-bottom: 25px;")
         .col-md-12.text-md-center
-          h2 Integrations at the speed of now.
-          .lead Over 60+ integrations available to connect to your app.
+          h2 Connect your app to the API economy
+          .lead Over 60+ services from across the web.
       .row
         .col-md-12.text-md-center
           img(src="./img/connectors/apigee.png" width=70 alt="Apigee" title="Apigee")
@@ -38,12 +37,39 @@ block content
           img(src="./img/connectors/stripe.png" width=70 alt="Stripe" title="Stripe")
           img(src="./img/connectors/github.png" width=70 alt="GitHub" title="GitHub")
           img(src="./img/connectors/box.png" width=70 alt="Box" title="Box")
+  .example-background(style="background-color: #3A3F50; color: white;")
+    .container.features-block
+      .row.features-headline
+        .col-md-4.offset-md-1
+          h2 Break the cycle. Build faster, be happier.
+          p The traditional application cycle can be a linear, sluggish process. Azuqua lets you rapidly prototype #[i and] scale your application to be production ready, all within the same development environment.
+          p Azuqua enables a build-first development paradigm. We believe that the best way to realize innovative ideas is to actually build them!
+        .col-md-7.text-md-center
+          img(src="./img/break_cycle.png" width="350")
+  .container(style="padding-top: 50px; padding-bottom: 50px;")
+    .row(style="padding-bottom: 30px;")
+      .col-md-12.text-md-center
+        h2 Built with Azuqua
+    .row
+      .col-md-4
+        h5.lead GE Minds + Machines 2016
+        h6 Fleet Management System
+        p.content An innovative fleet management system that responds, in real-time, to critical asset failures in the field. Built using Azuqua as the microservice orchestration layer.
+        p.content Read more about the solution at GE Digital.
+
+      .col-md-4
+        h5.lead TechCrunch Disrupt London 2016
+        h6 wandered.space, mobile location discovery.
+        p.content Sometimes, it's about the journey, not the destination. wandered.space is an app that was built for the TechCrunch Disrupt London 2016 Hackathon.
+        p.content Read more about the app at TechCrunch.
+      .col-md-4
+        h6
   .features-background(style="background-color: #3A3F50; color: white;")
     .container.features-block
       .row.features-headline
         .col-md-12.text-md-center
-          h2.display-4 Build fast. Really fast.
-          .lead(style="color: #DCDCDC")
+          h2.display-4 Innovative features. Built for speed.
+          .lead(style="color: #DCDCDC") We only create features that we love and would want to use in our day-to-day development process.
       .row.features-list
         .col-md-4.content-section
           h5 Azuqua Platform
@@ -52,63 +78,42 @@ block content
         .col-md-4.content-section
           h5 Azuqua API Forge
           .content(style="color:#DCDCDC;")
-            | Want to integrate a custom API or an API we don't yet support? #[span(style="color:#00adee;") Azuqua Forge] lets you build custom API integrations that you can re-use inside the Azuqua platform. Build once, use everywhere.
+            | Want to integrate a custom API or an API we don't yet support? Azuqua Forge lets you build custom API integrations that you can re-use inside the Azuqua platform. Build once, use everywhere.
         .col-md-4.content-section
           h5
-            //- i(class="fa fa-mobile" aria-hidden="true")
             | Azuqua Devices
           .content(style="color:#DCDCDC;")
-            | Send data to your application with the #[span(style="color:#00adee;") Azuqua Devices] mobile app. All the native functionality of a smartphone tied directly to your application. Interested in seeing a real-world solution?
+            | Send data to your application with the Azuqua Devices mobile app. All the native functionality of a smartphone tied directly to your application.
       .row
         .col-md-4.content-section
           h5.title API-driven development.
           .content(style="color:#DCDCDC;")
-            | Azuqua lets you expose your apps as API endpoints. Build your app, and get it out there into the world.
+            | Azuqua lets you expose your apps as API endpoints.
         .col-md-4.content-section
           h5.title A vast library of integrations.
           .content(style="color:#DCDCDC;")
             | We have over 60+ integrations (we call them connectors!) to leverage within your app. We are constantly developing more connectors every month.
         .col-md-4.content-section
-          h5.title Real-time tracking of data.
+          h5.title Transparent logging and debugging.
           .content(style="color:#DCDCDC;")
-            | We let you keep track of all the data flowing through your app, in real time. Discover exactly what your apps are doing.
-
-  //- .background
-  //-   .enterprise-features(style="padding-top: 80px; padding-bottom: 80px;")
-  //-     .container
-  //-       .row
-  //-         .col-md-8
-  //-           img.img-responsive(src="./img/azuqua_designer.png" width=675)
-  //-         .col-md-4
-  //-           h1 Programming first.
-  //-           .lead No magic handwaving necessary.
-  //-           h2(style="line-height: 1.3")
-  //-           p All the features of a full-fledged programming language. None of the pain.
-  //-           p You should be enabled to #[strong create] applications and integrations leveraging the most effective programming paradigms and principles- just #[strong faster], and #[strong easier].
-  //-           p Take the best parts of developing web applications, and ditch the rest.
-  //-
-  //- .social-background(style="background-color: #FBFBFC;")
-  //-   .container
-  //-     //- .row.text-md-center(style="padding-top: 25px;")
-  //-     //-   .col-md-12
-  //-     //-     h2.display-4 Connect with Azuqua.
-  //-     .row(style="padding: 35px;")
-  //-       .col-md-6
-  //-         .h2.lead(style="margin-bottom: 20px;") Recent News
-  //-         a(class="twitter-grid" data-chrome="nofooter" data-partner="tweetdeck" href="https://twitter.com/azuqua/timelines/801496659003703296")
-  //-         script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
-  //-       .col-md-6
-  //-         .h2.lead(style="margin-bottom: 20px;") Tweets from #[a(href="https://twitter.com/azuqua") @azuqua]
-  //-         a(class="twitter-timeline" data-tweet-limit=2 data-chrome="noheader,nofooter" href="https://twitter.com/azuqua") Tweets by azuqua
-  //-
-  //-
-  //-         //- a(class="twitter-timeline" data-tweet-limit=2 data-chrome="nofooter,noheader" href="https://twitter.com/azuqua" ) Tweets by azuqua
-  //-         //- script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
-  //-       //- .col-md-6.text-md-center
-  //-       //-   h3.display-4 Connect with us
-  //-
-  //- //-
-  //- //- .features-background(style="background-color: #3A3F50; color: white;")
-  //- //-   .container.features-block
-  //- //-     .row.features-headline
-  //- //-       .col-md-12.text-md-center
+            | Azuqua can track and log every single execution of your application. Instead of being a second-class consideration, application history is one of the core concepts built into Azuqua.
+      .row
+        .col-md-4.content-section
+          h5 Real-time, live development.
+          .content(style="color:#DCDCDC;")
+            | Instead of the constant process of revise code, then deploy, you can make a change to a live application and see that change realized instantly. No deployment necessary.
+        .col-md-4.content-section
+          h5 The agility to rapidly prototype.
+            .content(style="color: #DCDCDC;")
+        .col-md-4.content-section
+          h5
+  .social-background(style="background-color: #FBFBFC;")
+    .container(style="padding-top: 80px; padding-bottom: 80px;")
+      .row
+        .col-md-6
+          .h2.lead(style="margin-bottom: 20px;") Recent News
+          a(class="twitter-grid" data-chrome="nofooter" data-partner="tweetdeck" href="https://twitter.com/azuqua/timelines/801496659003703296")
+          script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
+        .col-md-6
+          .h2.lead(style="margin-bottom: 20px;") Tweets from #[a(href="https://twitter.com/azuqua") @azuqua]
+          a(class="twitter-timeline" data-tweet-limit=3 data-chrome="noheader,nofooter" href="https://twitter.com/azuqua") Tweets by azuqua

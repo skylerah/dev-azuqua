@@ -1,1 +1,1 @@
-var events=function(){var n=function(n){ga("send","event",{eventCategory:"Call-to-Action",eventAction:"click",eventLabel:"Sign Up Button",transport:"beacon"})};return{handleSignUp:n}}();$(".btn").click(function(n){events.handleSignUp(n)});
+var events=function(){var n=function(n){ga("send","event",{eventCategory:"Call-to-Action",eventAction:"click",eventLabel:"Sign Up Button",transport:"beacon",value:1e4})};return{handleSignUp:n}}();$(".btn").click(function(n){events.handleSignUp(n)});

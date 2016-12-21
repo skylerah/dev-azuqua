@@ -73,3 +73,7 @@ body {
     color: white;
   }
 }
+
+.navbar-nav .nav-item+.nav-item {
+  margin-left: 2rem;
+}

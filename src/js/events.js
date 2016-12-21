@@ -4,7 +4,8 @@ var events = (function() {
       eventCategory: 'Call-to-Action',
       eventAction: 'click',
       eventLabel: 'Sign Up Button',
-      transport: 'beacon'
+      transport: 'beacon',
+      value: 10000
     });
   };
 

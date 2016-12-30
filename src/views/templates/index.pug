@@ -4,13 +4,14 @@ block content
   .container.call-to-action(style="padding-top: 50px;")
     .row(style="padding-top: 15px;")
       .col-md-7.text-md-center
-        img.img-fluid(src="./img/landing_img.png")
+        //- img(src="./img/landing_img.png")
+        iframe(src="https://player.vimeo.com/video/197442568?title=1&byline=1&portrait=0" width="540" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
       .col-md-5
         h6 Fast, powerful, scalable
         h1(style="color: rgba(0, 140, 238, 1);") From idea to product, instantly.
-        p Spend your time innovating, not configuring. Azuqua lets you focus on the most important thing: #[strong building apps]. Azuqua lets you get started building your ideas faster than any other development tool.
+        p Spend your time innovating, not configuring. Azuqua lets you visually develop #[strong mobile] and #[strong web] backend services, hosted entirely on our infrastructure.
         p
-         | We provide a beautiful #[strong low code] development environment, #[strong hands-off infrastructure], service integrations to the most #[strong popular APIs] out there, and more.
+         | We provide a beautiful #[strong low code] development environment, #[strong hands-off infrastructure], service integrations to the #[strong most popular APIs] out there, and more.
         form.form-inline(style="padding-top: 15px;" action="https://auth.azuqua.com/signup" method="POST")
           .form-group
             input(name="email" type="email" placeholder="Email Address").form-control
@@ -22,24 +23,28 @@ block content
           //-  i
           //-   a(href="/pricing") what's the catch?
   .integrations-background
-    .container.integrations
-      .row.integration-headline(style="padding-bottom: 25px;")
+    .container(style="padding-top: 50px; padding-bottom: 50px;")
+      .row(style="padding-bottom: 40px;")
         .col-md-12.text-md-center
-          h2 Connect your app to the API economy
-          .lead Leverage powerful services that will bring your app to the next level.
+          h2.display-4 Built with Azuqua
+      .row(style="padding-bottom: 15px;")
+        .col-md-5.offset-md-1
+          img.img-fluid(src="./img/flo-force-one.png" alt="FLO Force One Dashboard")
+        .col-md-5.offset-md-1
+          img.img-fluid(src="./img/wandered_space_v2.png" alt="wandered.space")
       .row
-        .col-md-12.text-md-center
-          img(src="./img/connectors/apigee.png" width=70 alt="Apigee" title="Apigee")
-          img(src="./img/connectors/pivotal_cloud_foundry.png" width=70 alt="Pivotal Cloud Foundry" title="Pivotal Cloud Foundry")
-          img(src="./img/connectors/twilio.png" width=70 alt="Twilio" title="Twilio")
-          img(src="./img/connectors/twitter.png" width=70 alt="Twitter" title="Twitter")
-          img(src="./img/connectors/gmail.png" width=70 alt="Gmail" title="Gmail")
-          img(src="./img/connectors/sendgrid.png" width=70 alt="SendGrid" title="SendGrid")
-          img(src="./img/connectors/amazon.png" width=70 alt="Amazon S3" title="Amazon S3")
-          img(src="./img/connectors/slack.png" width=70 alt="Slack" title="Slack")
-          img(src="./img/connectors/stripe.png" width=70 alt="Stripe" title="Stripe")
-          img(src="./img/connectors/github.png" width=70 alt="GitHub" title="GitHub")
-          img(src="./img/connectors/box.png" width=70 alt="Box" title="Box")
+        .col-md-5.offset-md-1
+          h5.lead GE Minds + Machines 2016
+          h5 Grand Prize Winner
+          p.content FLO Force One was built using HTML/CSS + #[a(href="https://jquery.com/") jQuery] for AJAX calls to the web backend created on the Azuqua Platform. Content was dynamically rendered onto the dashboard for the purpose of the competition.
+          p
+            a(href="https://azuqua.com/2016/11/mission-accomplished-flo-force-one/") Read More
+        .col-md-5.offset-md-1
+          h5.lead TechCrunch Disrupt London 2016
+          h5 Runner-Up, Esri ArcGIS Category
+          p.content wandered.space was built using #[a(href="https://facebook.github.io/react/") React.js] and #[a(href="http://www.esri.com/software/arcgis") Esri ArcGIS] for the front-end component. Azuqua was used to build out the back-end logic, which included integration with the #[a(href="https://developers.arcgis.com/javascript/3/jssamples/exp_geolocate.html") ArcGIS Geolocation API] and #[a(href="http://developer.factual.com/") Factual API].
+          p
+            a(href="https://techcrunch.com/2016/12/04/wandered-space/") Read More
   .example-background(style="background-color: #3A3F50; color: white;")
     .container.features-block
       .row.features-headline
@@ -93,36 +98,25 @@ block content
         .col-md-4.content-section
           h5
   .built-background(style="background-color: #FBFBFC; border-top: 2px solid #E1E1E1; border-bottom: 1px solid #E1E1E1;")
-    .container(style="padding-top: 50px; padding-bottom: 50px;")
-      .row(style="padding-bottom: 30px;")
+    .container.integrations
+      .row.integration-headline(style="padding-bottom: 25px;")
         .col-md-12.text-md-center
-          h2.display-4(style="color: rgba(0, 140, 238, 1);") Built with Azuqua
-      .row.text-md-center(style="padding-bottom: 15px;")
-        .col-md-4
-          img.img-fluid(src="./img/ge_logo.png" alt="GE Logo" width=75)
-        .col-md-4
-          img.img-fluid(src="./img/tc_logo.png" alt="TechCrunch Logo" width=125)
-        .col-md-4
-          img.img-fluid(src="./img/azuqua_square.png" alt="Azuqua Logo" width=75)
+          h2 Connect your app to the API economy
+          .lead Leverage powerful services that will bring your app to the next level.
       .row
-        .col-md-4
-          h5.lead GE Minds + Machines 2016
-          h5 Grand Prize Winner
-          h6 FLO Force One, Fleet Management System
-          p.content An innovative fleet management system that responds, in real-time, to critical asset failures in the field. Built using Azuqua as the microservice orchestration layer.
-          p.content
-            a(href="https://azuqua.com/2016/11/mission-accomplished-flo-force-one/") Read more about the solution on our blog.
-        .col-md-4
-          h5.lead TechCrunch Disrupt London 2016
-          h5 Runner-Up, Esri ArcGIS Category
-          h6 wandered.space, Mobile Location Discovery
-          p.content Sometimes, it's about the journey, not the destination. wandered.space is an app that was built for the TechCrunch Disrupt London 2016 Hackathon.
-          p.content
-            a(href="https://techcrunch.com/2016/12/04/wandered-space/") Read about the app at TechCrunch.
-        .col-md-4
-          h5.lead Azuqua Developer Showcase 2016
-          h6 Intelligent Scaling, DevOps Solution
-          p.content Intelligent scaling anticipates demand by analyzing and monitoring metrics that can determine traffic surges within your application. Move beyond traditional resource measurements (CPU and memory) to anticipate demand.
+        .col-md-12.text-md-center
+          img(src="./img/connectors/apigee.png" width=70 alt="Apigee" title="Apigee")
+          img(src="./img/connectors/pivotal_cloud_foundry.png" width=70 alt="Pivotal Cloud Foundry" title="Pivotal Cloud Foundry")
+          img(src="./img/connectors/twilio.png" width=70 alt="Twilio" title="Twilio")
+          img(src="./img/connectors/twitter.png" width=70 alt="Twitter" title="Twitter")
+          img(src="./img/connectors/gmail.png" width=70 alt="Gmail" title="Gmail")
+          img(src="./img/connectors/sendgrid.png" width=70 alt="SendGrid" title="SendGrid")
+          img(src="./img/connectors/amazon.png" width=70 alt="Amazon S3" title="Amazon S3")
+          img(src="./img/connectors/slack.png" width=70 alt="Slack" title="Slack")
+          img(src="./img/connectors/stripe.png" width=70 alt="Stripe" title="Stripe")
+          img(src="./img/connectors/github.png" width=70 alt="GitHub" title="GitHub")
+          img(src="./img/connectors/box.png" width=70 alt="Box" title="Box")
+
   .social-background
     .container(style="padding-top: 80px; padding-bottom: 80px;")
       .row

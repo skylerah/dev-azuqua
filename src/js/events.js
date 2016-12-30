@@ -9,11 +9,22 @@ var events = (function() {
     });
   };
 
+  var initializeSlider = function() {
+    $('.slider').slick({
+      dots: true,
+      arrows: false
+    });
+  };
+
   return {
-    handleSignUp: handleSignUp
+    handleSignUp: handleSignUp,
+    initializeSlider: initializeSlider
   };
 })();
 
-$('.btn').click(function(event) {
-  events.handleSignUp(event);
-  });
+$(document).ready(function() {
+  events.initializeSlider();
+  $('.btn').click(function(event) {
+    events.handleSignUp(event);
+    });
+});

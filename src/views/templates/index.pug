@@ -3,16 +3,16 @@ extends ../layouts/layout
 block content
   .container.call-to-action(style="padding-top: 50px;")
     .row(style="padding-top: 15px;")
-      .col-md-7.text-md-center
+      .col-md-6.embed-responsive.embed-responsive-21by9
         //- img(src="./img/landing_img.png")
-        iframe(src="https://player.vimeo.com/video/197442568?title=1&byline=1&portrait=0" width="540" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
-      .col-md-5
+        iframe.embed-responsive-item(src="https://player.vimeo.com/video/197442568?title=1&byline=1&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+      .col-md-5.offset-md-1
         h6 Fast, powerful, scalable
         h1(style="color: rgba(0, 140, 238, 1);") From idea to product, instantly.
         p Spend your time innovating, not configuring. Azuqua lets you visually develop #[strong mobile] and #[strong web] backend services, hosted entirely on our infrastructure.
         p
          | We provide a beautiful #[strong low code] development environment, #[strong hands-off infrastructure], service integrations to the #[strong most popular APIs] out there, and more.
-        form.form-inline(style="padding-top: 15px;" action="https://auth.azuqua.com/signup" method="POST")
+        form.form-inline(style="padding-top: 15px;" action="https://alpha.azuqua.com/signup" method="POST")
           .form-group
             input(name="email" type="email" placeholder="Email Address").form-control
             input(name="signup_from" type="hidden" value="Developer").form-control
@@ -30,19 +30,19 @@ block content
       .row(style="padding-bottom: 15px;")
         .col-md-5.offset-md-1
           img.img-fluid(src="./img/flo-force-one.png" alt="FLO Force One Dashboard")
-        .col-md-5.offset-md-1
-          img.img-fluid(src="./img/wandered_space_v2.png" alt="wandered.space")
+        .col-md-4.offset-md-2
+          img.img-fluid(src="./img/wandered_space_mobile.png" width=120 alt="wandered.space")
       .row
         .col-md-5.offset-md-1
-          h5.lead GE Minds + Machines 2016
-          h5 Grand Prize Winner
-          p.content FLO Force One was built using HTML/CSS + #[a(href="https://jquery.com/") jQuery] for AJAX calls to the web backend created on the Azuqua Platform. Content was dynamically rendered onto the dashboard for the purpose of the competition.
+          h5.lead GE Minds + Machines 2016 Hackathon
+          h6
+          p.content FLO Force One was built using HTML/CSS + #[a(href="https://jquery.com/" target="_blank") jQuery] for AJAX calls to the web backend created on the Azuqua Platform. Content was dynamically rendered onto the dashboard for the purpose of the competition.
           p
-            a(href="https://azuqua.com/2016/11/mission-accomplished-flo-force-one/") Read More
+            a(href="https://azuqua.com/2016/11/mission-accomplished-flo-force-one/" target="_blank") Read More
         .col-md-5.offset-md-1
           h5.lead TechCrunch Disrupt London 2016
-          h5 Runner-Up, Esri ArcGIS Category
-          p.content wandered.space was built using #[a(href="https://facebook.github.io/react/") React.js] and #[a(href="http://www.esri.com/software/arcgis") Esri ArcGIS] for the front-end component. Azuqua was used to build out the back-end logic, which included integration with the #[a(href="https://developers.arcgis.com/javascript/3/jssamples/exp_geolocate.html") ArcGIS Geolocation API] and #[a(href="http://developer.factual.com/") Factual API].
+          h6 
+          p.content wandered.space was built using #[a(href="https://facebook.github.io/react/" target="_blank") React.js] and Esri ArcGIS for the front-end component. Azuqua was used to build out the back-end logic, which included integration with the #[a(href="https://developers.arcgis.com/javascript/3/jssamples/exp_geolocate.html" target="_blank") ArcGIS Geolocation API] and #[a(href="http://developer.factual.com/" target="_blank") Factual API].
           p
             a(href="https://techcrunch.com/2016/12/04/wandered-space/") Read More
   .example-background(style="background-color: #3A3F50; color: white;")

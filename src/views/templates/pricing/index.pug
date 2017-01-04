@@ -1,60 +1,59 @@
 extends ../../layouts/layout.pug
 
 block content
-  .page-header-container(style="background-color: #222738; color: white; padding-top: 40px; padding-bottom: 40px;")
+  .page-header-container(style="background-color: #3A3F50; color: white; padding-top: 40px; padding-bottom: 40px;")
     .container
       .row
         .col-md-12.text-md-center
-          h1.display-2 Pricing
-  .container(style="padding-top: 40px; padding-bottom: 40px;")
+          h2 Flexible pricing, to meet your needs.
+          .lead
+  .container(style="padding-top: 80px;")
     .row
       .col-md-12.text-md-center
-        h4 #[strong FLOs] are streams of application logic that are the foundation of your application.
-    .row(style="padding-top: 40px;")
+        h3(style="color: #008CEE") #[strong FLOs] are streams of programming logic that are the basis for your application.
+        .lead You can use many FLOs to drive complex functionality, or a single FLO for a specific purpose.
+    .row(style="padding-top: 80px;")
       .col-md-5
-        h5 Pay only for what you use.
+        h5 Pay for only what you use.
         p Each FLO costs #[strong $0.14 per hour of utilization]. Inside Azuqua, you can toggle the status of a FLO to be active, or inactive, whenever you'd like.
-        h5 Join our beta Developer Program.
-        p We're offering early access to developers while our Developer Program is in beta. This plan will allow you to build, explore, and create on the Azuqua Platform, at no cost.
-        p This early access period is limited to non-commercial applications (although we are very happy to discuss what it would take to allow a commercial solution!).
-        p Once the early access period is over, our pricing will be changed to our standard $0.14 per hour of FLO utilization. Don't worry, you will be able to keep all existing FLOs you have created during this period of time!
-      .col-md-5.offset-md-1
+        h5 Be one of the first. Join our beta program.
+        p We're offering #[strong free Early Access] to developers while our Developer Program is in beta.
+        p Once the early access period is over, our pricing will be changed to our standard $0.14 per hour of FLO utilization. Don't worry, you will be able to keep all existing FLOs you have created during the early access period.
+      .col-md-6.offset-md-1
         img.img-fluid(src="../img/dev_group.jpg")
-    .row(style="padding-top: 40px;")
-      .col-md-10.offset-md-1
-        h4.text-md-center Invite, collaborate, and create with others.
-        table.table
-          thead
-            tr
-              th Plan
-              th Tier
-              th
-              th Cost
-          tbody
-            tr
-              td Developer
-              td Early Access
-              td A great way to get started collaborating on the Azuqua Platform.
-              td Free
-            tr
-              td Developer
-              td Unrestricted
-              td All the features of Azuqua, at a flexible, variable cost.
-              td $0.14/per hour
-            tr
-              td Enterprise
-              td Basic
-              td Get serious with microservice building and orchestration. Azuqua enables people at varying layers of your organization to participate in the development process.
-              td 5 FLOs, $200/month
-            tr
-              td Enterprise
-              td Premier
-              td
-              td 20 FLOs, $1000/month
-    .container(style="padding-top: 40px; padding-bottom: 40px;")
+    //- .row(style="padding-top: 40px; padding-bottom: 40px;")
+    //-   h4.text-md-center Invite, collaborate, and create with others.
+    //- .row
+    //-   .col-md-4.offset-md-2
+    //-     h5 Take your app to scale.
+    //-     p Azuqua will scale proportionally with the traffic your app is receiving. No configuration necessary.
+    //-   .col-md-4
+    //-     table.table
+    //-       thead
+    //-         tr
+    //-           th Plan
+    //-           th Cost
+    //-       tbody
+    //-         tr
+    //-           td Developer
+    //-           td $0.14/per FLO hour.
+    //-         tr
+    //-           td Basic
+    //-           td 5 FLOs, $200/month
+    //-         tr
+    //-           td Premier
+    //-           td 20 FLOs, $1000/month
+    //-         tr
+    //-           td Enterprise
+    //-           td Contact Us
+
+
+  .color-container(style="background-color: #FBFBFC;")
+    .container(style="padding-top: 80px; padding-bottom: 80px;")
       .row
         .col-md-12.text-md-center
-          h3 Sign up today to join our beta program.
+          h3 Sign up today to take part in our beta program!
+          .lead We'd love to get you involved with the Azuqua Platform.
           form.form-inline(style="padding-top: 15px;" action="https://auth.azuqua.com/signup" method="POST")
             .form-group
               input(name="email" type="email" placeholder="Email Address").form-control

@@ -7,23 +7,27 @@ var events = (function() {
       transport: 'beacon',
       value: 10000
     });
-  };
 
-  var initializeSlider = function() {
-    $('.slider').slick({
-      dots: true,
-      arrows: false
+    //sign up
+    console.log('hitting mixpanels');
+    mixpanel.track("Sign Up");
+
+    var email = $('.sign-up-email').val();
+    console.log(email);
+    mixpanel.identify(email);
+
+    mixpanel.people.set({
+      "$email": email,
+      "$created": new Date()
     });
-  };
 
+  };
   return {
-    handleSignUp: handleSignUp,
-    initializeSlider: initializeSlider
+    handleSignUp: handleSignUp
   };
 })();
 
 $(document).ready(function() {
-  events.initializeSlider();
   $('.btn').click(function(event) {
     events.handleSignUp(event);
     });
